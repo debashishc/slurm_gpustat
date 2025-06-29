@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "slurm-gpustat"
+version = "0.0.15"
+description = "A simple SLURM gpu summary tool"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Samuel Albanie"},
+]
+maintainers = [
+    {name = "Debashish Chakraborty"},
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "colored",
+    "seaborn",
+    "beartype",
+    "humanize",
+    "tabulate",
+    "humanfriendly",
+    "termcolor",
+]
+
+[project.urls]
+Homepage = "https://github.com/debashishc/slurm_gpustat"
+Repository = "https://github.com/debashishc/slurm_gpustat"
+"Original Repository" = "https://github.com/albanie/slurm_gpustat"
+
+[project.scripts]
+slurm_gpustat = "slurm_gpustat.slurm_gpustat:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "coverage>=7.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
