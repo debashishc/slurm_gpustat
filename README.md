@@ -119,8 +119,13 @@ total > avg: 3
 
 ### Dependencies
 
-* `Python >= 3.6`
+* `Python >= 3.8`
 * `numpy`
-* `beartype`
-* `seaborn`
+* `pandas`
 * `colored`
+* `seaborn`
+* `beartype`
+* `humanize`
+* `tabulate`
+* `humanfriendly`
+* `termcolor`
